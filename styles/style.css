@@ -76,7 +76,22 @@ header{
     width: 100%;
 }
 
+/* sponsors section styles */
 
+.sponsors-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #FFF;
+}
+.sponsors-section .sponsors-item{
+    width: 100px;
+}
+.sponsors-section .sponsors-item img{
+    width: 100%;
+}
 /* responsive styles */
 /* mobile devices */
 
@@ -94,5 +109,9 @@ header{
     }
     .influencer-text .influencer-title{
         font-size: 1.75rem;
+    }
+    .sponsors-section{
+        flex-wrap: wrap;
+        gap: 20px;
     }
 }
