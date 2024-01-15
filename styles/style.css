@@ -1,40 +1,47 @@
 /* common styles */
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
-body{
+
+body {
     max-width: 1200px;
     width: 80%;
     margin: 0 auto;
+    background-color: #F1E4FF;
 }
 
 /* header styles */
 
-header{
+header {
     margin: 80px auto;
 }
-.nav-bar{
+
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav-bar h3{
+
+.nav-bar h3 {
     color: #3A3A3A;
     font-size: 1.5rem;
     font-weight: 700;
 }
-.nav-item{
+
+.nav-item {
     display: flex;
     gap: 20px;
 }
-.nav-item li{
-    
+
+.nav-item li {
+
     list-style: none;
 }
-.nav-item li a{
+
+.nav-item li a {
     text-decoration: none;
     font-weight: 600;
     color: #3A3A3A;
@@ -42,26 +49,30 @@ header{
 
 /* influencer section styles */
 
-.influencer-section{
+.influencer-section {
     display: flex;
     align-items: center;
     gap: 50px;
 }
-.influencer-text{
+
+.influencer-text {
     width: 50%;
 }
-.influencer-text .influencer-title{
+
+.influencer-text .influencer-title {
     font-size: 3rem;
     font-weight: 700;
     color: #3A3A3A;
 }
-.influencer-text .influencer-description{
+
+.influencer-text .influencer-description {
     color: #3A3A3A;
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.influencer-text .primary-btn{
+
+.influencer-text .primary-btn {
     background-color: #E02C6D;
     color: #FFFFFF;
     padding: 15px 25px;
@@ -69,49 +80,153 @@ header{
     border-radius: 40px;
     font-weight: 700;
 }
-.influencer-img{
+
+.influencer-img {
     width: 50%;
 }
-.influencer-img img{
+
+.influencer-img img {
     width: 100%;
 }
 
 /* sponsors section styles */
 
-.sponsors-section{
+.sponsors-section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 50px auto;
     padding: 30px;
-    background-color: #FFF;
+    border-radius: 10px;
 }
-.sponsors-section .sponsors-item{
+
+.sponsors-section .sponsors-item {
     width: 100px;
 }
-.sponsors-section .sponsors-item img{
+
+.sponsors-section .sponsors-item img {
     width: 100%;
+}
+
+/* popular collection styles */
+.collection-section{
+    margin-bottom: 50px;
+}
+.collection-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.collection-section h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #3A3A3A;
+    margin-bottom: 40px;
+}
+.collection-item {
+    /* max-width: 300px; */
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+}
+.collection-item img{
+    width: 100%;
+}
+.collection-item h4{
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #18191F;
+}
+.collection-item .price{
+    font-size: 1.25rem;
+    color: #000000DE;
+}
+.collection-item .fa-solid{
+    color: #FB8200;
+}
+
+.collection-item p{
+    font-size: 0.80rem;
+}
+.collection-section .more{
+    color: rgba(224, 44, 109, 0.87);
+    text-align: right;
+    margin-top: 15px;
+}
+
+/* features section */
+
+.features-section{
+    display: flex;
+    align-items: center;
+}
+.features-img{
+    width: 50%;
+}
+.features-img img{
+    width: 90%;
+    object-fit: cover;
+}
+.features-text{
+    width: 50%;
+}
+.features-text .features-title{
+    color: #0A0826;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+.features-text .features-description{
+    color: #6C6C6C;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.features-text .btn-secondary{
+    background: #E02C6D;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
 }
 /* responsive styles */
 /* mobile devices */
 
 @media screen and (max-width: 576px) {
-    .nav-bar{
+    .nav-bar {
         flex-direction: column;
         gap: 20px;
     }
-    .influencer-section{
+
+    .influencer-section, .features-section {
         flex-direction: column-reverse;
     }
-    .influencer-img, .influencer-text{
+
+    .influencer-img,
+    .influencer-text,
+    .features-img, 
+    .features-text
+        {
         width: 100%;
         text-align: center;
     }
-    .influencer-text .influencer-title{
+
+    .influencer-text .influencer-title {
         font-size: 1.75rem;
     }
-    .sponsors-section{
+
+    .sponsors-section {
         flex-wrap: wrap;
         gap: 20px;
+    }
+    .collection-container{
+        grid-template-columns: 1fr;
+    }
+    .features-text{
+        margin-bottom: 20px;
+    }
+    .features-text .features-title{
+        font-size: 1.75rem;
     }
 }
